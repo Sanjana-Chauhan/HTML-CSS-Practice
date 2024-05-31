@@ -9,7 +9,9 @@
 :root{
     --main-gray: rgb(226, 228, 228);
 }
-
+button:hover , a:hover{
+    cursor: pointer;
+}
 .main-conatiner{
     width: 100%;
     min-height: 600px;
@@ -37,10 +39,16 @@ header .header-navs ul{
 header .header-navs ul li{
     padding: 10px 13px;
     text-align: center;
+    border-radius: 20px;
+}
+header .header-navs ul li:hover{
+    border: inset;
+    border: 1px solid black;
+    transition: .5s ease-out;
 }
 header .header-navs ul li input{
     border: none;
-    offset: none;
+    outline: none;
     padding:5px ;
     background-color: transparent;
     border-bottom: 1px solid black;
@@ -55,21 +63,34 @@ main{
 main .section-one{
     width: 17%;
     float: left;
-    /* border: 1px solid black; */
     height: 600px;
     background-color: var(--main-gray);
-    padding: 10px 10px 10px 20px;
+    padding: 10px;
     position: fixed;
+}
+main .section-one .Profile-display{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+main .section-one ul{
+        width: 100%;
+}
+main .section-one ul li{
+    padding: 12px 40px;
+    margin: 4px 0px;
+    color: rgb(119, 108, 108);
 }
 main .section-two{
     width: 83%;
     float: right;
     background-color: var(--main-gray);
-    /* border: 1px solid black; */
     min-height: 600px;
 }
 
-.section-two .channel , .content-banner{
+.section-two .channel , .content-banner , .courses-card-holder{
     width: 94%;
     min-height: 100px;
     border-radius: 20px;
@@ -83,13 +104,12 @@ main .section-two{
     padding-left: 15px;
     align-items: center;
 }
-.section-two .channel .channel-info .channel-logo{
+.channel-logo{
     width: 22%;
-    height: 80px;
     margin-right: 5px;
     border-radius: 50%;
 }
-.section-two .channel .channel-info .channel-logo img{
+.channel-logo img{
     width: 100%;
 }
 .section-two .channel .channel-buttons{
@@ -155,4 +175,38 @@ main .section-two{
     padding: 10px 20px;
     background-color: black;
     color: white;
+}
+.courses-card-holder{
+    padding: 10px;
+    background:none;
+    justify-content: space-between;
+}
+.course-card{
+    width: 23%;
+    display: flex;
+    flex-direction:column;
+    border-radius: 10px;
+    background-color: white;
+}
+.course-card-img{
+    width: 100%;
+}
+.course-img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.course-card-content h1{
+    font-size:17px;
+    font-weight: 600;
+}
+.course-card-content{
+    padding: 10px;
+}
+.course-card-content p{
+    font-size: 11px;
+}
+.course-card-content h2{
+    display: inline;
+    font-size:16px;
 }
