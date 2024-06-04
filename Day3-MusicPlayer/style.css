@@ -14,7 +14,6 @@
     display: flex;
     align-items: center;
     justify-content:flex-start;
-    padding-left: 200px;
 }
 .music-card{
     width: 300px;
