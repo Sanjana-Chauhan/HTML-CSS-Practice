@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculater</title>
+    <link rel="stylesheet" href="calculater.css">
+</head>
+<body>
+    <!-- add more button like clear one char and history option -->
+    <span class="heading"> Calculater</span>
+    <div class="container">
+        <div class="calculater">
+                <input type="text" id="display" readonly>
+                <button class="but" onclick="clicked(1)">1</button>
+                <button class="but" onclick="clicked(2)">2</button>
+                <button class="but" onclick="clicked(3)">3</button>
+                <button class="but" onclick="clicked('+')">+</button>
+
+                <button class="but" onclick="clicked(4)">4</button>
+                <button class="but" onclick="clicked(5)">5</button>
+                <button class="but" onclick="clicked(6)">6</button>
+                <button class="but" onclick="clicked('-')">-</button>
+
+                <button class="but" onclick="clicked(7)">7</button>
+                <button class="but" onclick="clicked(8)">8</button>
+                <button class="but" onclick="clicked(9)">9</button>
+                <button class="but" onclick="clicked('*')">*</button>
+
+                <button class="but" onclick="clicked('.')">.</button>
+                <button class="but" onclick="clicked('0')">0</button>
+                <button class="but" onclick="clicked('/')">/</button>
+                <button class="but" onclick="clicked('=')">=</button> 
+                
+                <button class="but last" onclick="clicked('C')">C</button>
+                <button class="but last" onclick="clicked('A')">A</button>
+        </div>
+    </div>
+    <div class="gola"></div>
+    <script>
+            let cur_exp="";
+            function clicked(x){
+                if(x=='C'){
+                    cur_exp="";
+                    document.querySelector('#display').value="";
+                }
+                else if(x=='='){
+                    cur_exp=eval(cur_exp);
+                    document.querySelector('#display').value=cur_exp;
+                }
+                else if(x=='A'){
+                    cur_exp=cur_exp.substring(0,cur_exp.length-1);
+                    document.querySelector('#display').value=cur_exp;
+
+                }
+                else{
+                    cur_exp=cur_exp+x;
+                document.querySelector('#display').value=cur_exp;
+                }    
+            }
+    </script>
+</body>
+</html>
