@@ -14,6 +14,9 @@ function addTodo(){
         DateInput.value='';
         displayTodo();
     }
+    else{
+        alert("Enter some task first!");
+    }
 }
 function displayTodo(){
     let box=document.querySelector('.output-sec');
